@@ -16,6 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -28,16 +32,19 @@ dependencies {
 
     // ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.lifecycleVersion"
-
     implementation "androidx.room:room-runtime:$rootProject.ext.roomVersion"
     implementation "androidx.legacy:legacy-support-v4:$rootProject.ext.androidxVersion"
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.lifecycleVersion"
     annotationProcessor "androidx.room:room-compiler:$rootProject.ext.roomVersion"
+
     // alternately - if using Java8, use the following instead of lifecycle-compiler
     implementation "androidx.lifecycle:lifecycle-common-java8:$rootProject.ext.lifecycleVersion"
+
     // optional - ReactiveStreams support for LiveData
     implementation "androidx.lifecycle:lifecycle-reactivestreams:$rootProject.ext.lifecycleVersion"
+
     // use -ktx for Kotlin
+
     // optional - Test helpers for LiveData
     testImplementation "androidx.arch.core:core-testing:$rootProject.ext.lifecycleVersion"
     androidTestImplementation "androidx.test:runner:$rootProject.ext.testRunnerVersion"
