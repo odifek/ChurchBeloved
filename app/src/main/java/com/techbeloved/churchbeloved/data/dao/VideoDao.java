@@ -12,7 +12,7 @@ import androidx.room.Query;
 
 @Dao
 public interface VideoDao {
-    @Query("SELECT * FROM videos ORDER BY dowloaded")
+    @Query("SELECT * FROM videos ORDER BY dateDownloaded")
     LiveData<List<Video>> loadAllVideo();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

@@ -37,9 +37,12 @@ public class Video {
      */
     private String streamId;
 
-    private Date dowloaded;
+    private Date dateDownloaded;
 
-    public Video() {}
+    public Video(@NonNull String id, String title) {
+        this.id = id;
+        this.title = title;
+    }
 
     public String getId() {
         return id;
@@ -81,11 +84,11 @@ public class Video {
         this.sermonId = sermonId;
     }
 
-    public Date getDowloaded() {
-        return dowloaded;
+    public Date getDateDownloaded() {
+        return dateDownloaded;
     }
 
-    public void setDowloaded(Date dowloaded) {
-        this.dowloaded = dowloaded;
+    public void setDateDownloaded(Date dateDownloaded) {
+        this.dateDownloaded = dateDownloaded;
     }
 }

@@ -2,6 +2,7 @@ package com.techbeloved.churchbeloved.data.model;
 
 import java.util.Date;
 
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -14,6 +15,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "series")
 public class Series {
 
+    @NonNull
     @PrimaryKey
     private String id;
 
@@ -26,17 +28,20 @@ public class Series {
      */
     private String description;
 
+    private String posterUrl;
+
     private Date updated;
 
-    public Series() {
-
+    public Series(@NonNull String id, String title) {
+        this.id = id;
+        this.title = title;
     }
 
-    public String getId() {
+    public @NonNull String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(@NonNull String id) {
         this.id = id;
     }
 
@@ -62,5 +67,13 @@ public class Series {
 
     public void setUpdated(Date updated) {
         this.updated = updated;
+    }
+
+    public String getPosterUrl() {
+        return posterUrl;
+    }
+
+    public void setPosterUrl(String posterUrl) {
+        this.posterUrl = posterUrl;
     }
 }

@@ -2,6 +2,7 @@ package com.techbeloved.churchbeloved.data.model;
 
 import java.util.Date;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
@@ -18,6 +19,7 @@ public class Audio {
     /**
      * Auto generated Firebase Id for this audio
      */
+    @NonNull
     @PrimaryKey
     private String id;
     private String title;
@@ -49,7 +51,9 @@ public class Audio {
 
     private Date downloaded;
 
-    public Audio() {
+    public Audio(@NonNull String id, String title) {
+        this.id = id;
+        this.title = title;
     }
 
     public String getId() {

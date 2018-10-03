@@ -2,10 +2,12 @@ package com.techbeloved.churchbeloved.data.model;
 
 import java.util.Date;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
+import androidx.room.PrimaryKey;
 
 import static androidx.room.ForeignKey.CASCADE;
 
@@ -16,6 +18,8 @@ public class Sermon {
     /**
      * id is a firebase generated id
      */
+    @NonNull
+    @PrimaryKey
     private String id;
     private String title;
 
@@ -48,12 +52,19 @@ public class Sermon {
     private Date updated;
 
     /**
+     * If the audio has been downloaded, the file location will be stored here
+     */
+    private String localAudioUrl;
+
+    /**
      * Notes is html formatted String which can be displayed in a Webview
      */
     private String notes;
 
 
-    public Sermon() {
+    public Sermon(@NonNull String id, String title) {
+        this.id = id;
+        this.title = title;
     }
 
     public String getId() {
@@ -142,5 +153,13 @@ public class Sermon {
 
     public void setSummary(String summary) {
         this.summary = summary;
+    }
+
+    public String getLocalAudioUrl() {
+        return localAudioUrl;
+    }
+
+    public void setLocalAudioUrl(String localAudioUrl) {
+        this.localAudioUrl = localAudioUrl;
     }
 }
