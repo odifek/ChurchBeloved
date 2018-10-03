@@ -1,16 +1,16 @@
-package com.techbeloved.newchurchapp.data;
+package com.techbeloved.churchbeloved.data;
 
 import android.content.Context;
 
-import com.techbeloved.newchurchapp.data.dao.AudioDao;
-import com.techbeloved.newchurchapp.data.dao.SeriesDao;
-import com.techbeloved.newchurchapp.data.dao.SermonDao;
-import com.techbeloved.newchurchapp.data.dao.VideoDao;
-import com.techbeloved.newchurchapp.data.model.Audio;
-import com.techbeloved.newchurchapp.data.model.Series;
-import com.techbeloved.newchurchapp.data.model.Sermon;
-import com.techbeloved.newchurchapp.data.model.Video;
-import com.techbeloved.newchurchapp.utils.AppExecutors;
+import com.techbeloved.churchbeloved.data.dao.AudioDao;
+import com.techbeloved.churchbeloved.data.dao.SeriesDao;
+import com.techbeloved.churchbeloved.data.dao.SermonDao;
+import com.techbeloved.churchbeloved.data.dao.VideoDao;
+import com.techbeloved.churchbeloved.data.model.Audio;
+import com.techbeloved.churchbeloved.data.model.Series;
+import com.techbeloved.churchbeloved.data.model.Sermon;
+import com.techbeloved.churchbeloved.data.model.Video;
+import com.techbeloved.churchbeloved.utils.AppExecutors;
 
 import androidx.room.Database;
 import androidx.room.Room;

@@ -1,4 +1,4 @@
-package com.techbeloved.newchurchapp;
+package com.techbeloved.churchbeloved;
 
 import org.junit.Test;
 

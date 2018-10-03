@@ -1,4 +1,4 @@
-package com.techbeloved.newchurchapp;
+package com.techbeloved.churchbeloved;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.techbeloved.churchbeloved.R.layout.activity_main);
     }
 }

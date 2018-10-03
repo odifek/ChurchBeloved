@@ -1,4 +1,4 @@
-package com.techbeloved.newchurchapp.data;
+package com.techbeloved.churchbeloved.data;
 
 import java.util.Date;
 

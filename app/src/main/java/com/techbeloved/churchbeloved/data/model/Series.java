@@ -1,7 +1,6 @@
-package com.techbeloved.newchurchapp.data.model;
+package com.techbeloved.churchbeloved.data.model;
 
 import java.util.Date;
-import java.util.List;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

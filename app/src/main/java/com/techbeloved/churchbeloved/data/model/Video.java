@@ -1,4 +1,4 @@
-package com.techbeloved.newchurchapp.data.model;
+package com.techbeloved.churchbeloved.data.model;
 
 import java.util.Date;
 

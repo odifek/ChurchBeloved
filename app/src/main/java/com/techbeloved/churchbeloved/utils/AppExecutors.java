@@ -1,4 +1,4 @@
-package com.techbeloved.newchurchapp.utils;
+package com.techbeloved.churchbeloved.utils;
 
 import android.os.Handler;
 import android.os.Looper;

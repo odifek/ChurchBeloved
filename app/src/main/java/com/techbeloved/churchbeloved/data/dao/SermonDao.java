@@ -1,6 +1,6 @@
-package com.techbeloved.newchurchapp.data.dao;
+package com.techbeloved.churchbeloved.data.dao;
 
-import com.techbeloved.newchurchapp.data.model.Sermon;
+import com.techbeloved.churchbeloved.data.model.Sermon;
 
 import java.util.List;
 
