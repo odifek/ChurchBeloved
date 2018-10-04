@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">New Church App</string>
+    <string name="app_name">Church Beloved App</string>
+    <string name="view_all">view all</string>
+    <string name="media_desc">Image of the media item</string>
+    <string name="series_description_placeholder">The love we have for God should propell us to love people and the brethren, living in righteousness and holiness all the days of our lives</string>
+    <string name="download_label">download</string>
+    <string name="video_download_label">Video</string>
+    <string name="audio_download_label">Audio</string>
+    <string name="power_sample">For as many as receive him to them he gave the power to become the sons of God, even those who believe in him. There is a power that comes through peace with God and men</string>
 </resources>

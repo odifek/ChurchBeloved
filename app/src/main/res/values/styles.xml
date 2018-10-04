@@ -1,11 +1,73 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textAppearanceButton">@style/TextAppearance.MaterialComponents.Button</item>
+        <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Button</item>
     </style>
 
+    <style name="ViewAllButton" >
+        <item name="background">@drawable/view_all_bg</item>
+        <item name="android:textColor">@color/colorDarkText</item>
+        <item name="android:textAppearance">@style/buttonText</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="ViewAllButtonInverse" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="background">@drawable/view_all_bg</item>
+        <item name="android:textColor">@color/colorWhiteText</item>
+        <item name="android:textAppearance">@style/buttonText</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="buttonText" parent="TextAppearance.MaterialComponents.Button">
+        
+    </style>
+
+    <style name="detailTextAppearance" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/colorDarkText</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+    <style name="detailTextAppearanceInverse" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/colorWhiteText</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="mediaActionStyle">
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="android:textColor">@color/colorDarkText</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="textBoldHeadline" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/open_sans_semibold</item>
+    </style>
+
+    <style name="textCategoryTitle" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/open_sans_extrabold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="textCategoryTitleInverse" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/open_sans_extrabold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/colorWhiteText</item>
+    </style>
+
+    <style name="mediaActionStyle.Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textColor">@color/colorDarkText</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="sectionCaption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textAllCaps">true</item>
+        <item name="fontFamily">@font/open_sans</item>
+    </style>
 </resources>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/include_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/media_detail_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="344dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/media_detail_download_label" />
+
+    <TextView
+        android:id="@+id/media_detail_download_label"
+        style="@style/mediaActionStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/download_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/media_detail_image_view" />
+
+    <Button
+        android:id="@+id/media_detail_audio_download_btn"
+        style="@style/mediaActionStyle.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:drawableLeft="@drawable/ic_file_download_black"
+        android:text="@string/audio_download_label"
+        app:layout_constraintStart_toEndOf="@+id/media_detail_download_label"
+        app:layout_constraintTop_toBottomOf="@+id/media_detail_image_view" />
+
+    <Button
+        android:id="@+id/media_detail_video_download_button"
+        style="@style/mediaActionStyle.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:drawableLeft="@drawable/ic_file_download_black"
+        android:text="@string/video_download_label"
+        app:layout_constraintStart_toEndOf="@+id/media_detail_audio_download_btn"
+        app:layout_constraintTop_toBottomOf="@+id/media_detail_image_view"
+        android:drawableStart="@drawable/ic_file_download_black" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/media_detail_title"
+                style="@style/textBoldHeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                tools:text="Power Through Peace" />
+            <TextView
+                android:id="@+id/media_detail_series_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                style="@style/detailTextAppearance"
+                tools:text="Mount Horeb 2018"/>
+
+            <TextView
+                android:id="@+id/media_detail_series_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="24dp"
+                style="@style/detailTextAppearance"
+                tools:text="@string/power_sample"/>
+
+            <LinearLayout
+                android:id="@+id/media_detail_resources_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/media_detail_resources_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/sectionCaption"
+                    tools:text="resources"/>
+
+                <!-- These should be added dynamically
+                    Using View view = LayoutInflater.from(context).inflate(R.layout.media_detail_resource_item)
+                    TextView takeActionText = view.findViewById(R.id.media_detail_resource_item)
+                -->
+                <View
+                    android:id="@+id/media_detail_resources_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/media_detail_take_action_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/textBoldHeadline"
+                    tools:text="Take action"/>
+                <View
+                    android:id="@+id/media_detail_resources_divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/media_detail_declarations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/textBoldHeadline"
+                    tools:text="Pastor's declarations"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/media_detail_more_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                style="@style/sectionCaption"
+                tools:text="more from this series"/>
+
+            <include
+                layout="@layout/include_series_items"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

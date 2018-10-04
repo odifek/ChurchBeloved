@@ -2,22 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:paddingBottom="16dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_blue_gradient"
+    android:paddingBottom="16dp">
 
     <TextView
         android:id="@+id/media_overview_category_title"
+        style="@style/textCategoryTitleInverse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/open_sans_extrabold"
         android:padding="4dp"
-        android:textAllCaps="true"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-        android:textColor="@android:color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Messages" />
@@ -25,6 +23,7 @@
     <Button
         android:id="@+id/media_overview_view_all_btn"
         android:background="@drawable/view_all_bg"
+        android:textColor="@color/colorWhiteText"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_marginTop="8dp"
@@ -33,26 +32,9 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:text="@string/view_all"
-        android:textAllCaps="true"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
         app:layout_constraintBottom_toBottomOf="@+id/media_overview_category_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/media_overview_series_poster"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -65,12 +47,14 @@
     <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
         android:scrollbarThumbHorizontal="@null"
         android:scrollbarThumbVertical="@null"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/media_overview_series_poster">
+        app:layout_constraintTop_toTopOf="@+id/guideline">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -79,10 +63,10 @@
 
             <TextView
                 android:id="@+id/media_overview_series_description"
-                style="@style/detailTextAppearance"
+                style="@style/detailTextAppearanceInverse"
                 android:layout_width="280dp"
-                android:layout_marginLeft="16dp"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
                 tools:layout_editor_absoluteX="184dp"
                 tools:layout_editor_absoluteY="259dp"
                 tools:text="@string/series_description_placeholder" />
