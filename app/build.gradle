@@ -29,6 +29,7 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$rootProject.ext.androidxVersion"
     implementation "androidx.cardview:cardview:$rootProject.ext.androidxVersion"
     implementation "com.google.android.material:material:$rootProject.ext.androidxVersion"
+    implementation 'androidx.legacy:legacy-support-core-ui:1.0.0'
 
     // ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.lifecycleVersion"
